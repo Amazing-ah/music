@@ -1,0 +1,35 @@
+.Index {
+  width: 100vw;
+  height: 100vh;
+}
+.indexHeader {
+  width: 100vw;
+  height: 1rem;
+  background-color: #fff;
+  line-height: 1rem;
+  display: flex;
+}
+.indexHeader div {
+  flex: 1;
+  font-size: 0.4rem;
+  display: flex;
+  justify-content: center;
+}
+.indexHeader div a {
+  color: #000;
+}
+.checkStyle {
+  border-bottom: 0.01rem solid #ff000a;
+  color: #d8443a;
+}
+.Banner {
+  touch-action: none;
+  height: 3rem;
+}
+.Banner .am-carousel,
+.slider-frame,
+.slider-list,
+.slider-slide img,
+.slider-slide {
+  height: 100% !important;
+}
