@@ -1,0 +1,104 @@
+.SearchInput {
+  width: 100vw;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0.2rem;
+}
+.SearchInput input {
+  width: 80%;
+  height: 0.8rem;
+  background-color: #f3f4f5;
+  border-radius: 0.4rem;
+  padding-left: 0.7rem;
+}
+
+.searchImg {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  left: 0.9rem;
+  top: 0.25rem;
+}
+/* searchButton */
+.searchButton {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.searchButton div {
+  border: 1px solid #000;
+  font-size: 0.4rem;
+  padding: 0 0.2rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-radius: 0.3rem;
+  margin: 0.2rem 0;
+}
+
+/* list */
+.SearchNum {
+  flex: 1;
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchText {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.SearchText p {
+  flex: 1;
+}
+.SearchGo {
+  flex: 1;
+}
+.SearchColor {
+  color: #fe0110;
+}
+.SearchList {
+  width: 100vw;
+  height: 100vh;
+}
+.SearchList ul li {
+  height: 1.4rem;
+  padding: 0 0.1rem;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.SearchText p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.SearchText_name {
+  width: 4.2rem;
+  font-size: 0.4rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.SearchText_who {
+  margin-left: 0.1rem;
+  color: #909090;
+}
+.SearchText_hq {
+  border: 1px solid #f46939;
+  color: #f46939;
+  padding: 0 0.05rem;
+}
+.SearchGo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

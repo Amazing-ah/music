@@ -11,6 +11,8 @@ import "antd-mobile/dist/antd-mobile.css";
 // store
 import { Provider } from "react-redux";
 import store from "./store";
+// font
+import "./assets/css/iconfont.css";
 
 // 路由模式
 import { HashRouter } from "react-router-dom";

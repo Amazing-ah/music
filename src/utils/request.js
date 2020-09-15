@@ -1,6 +1,4 @@
 import axios from "axios";
-import qs from "qs";
-import store from "../store";
 
 //请求拦截
 axios.interceptors.request.use((config) => {
@@ -15,10 +13,48 @@ axios.interceptors.response.use((res) => {
 });
 
 // 轮播图
-export const reqBanner = (type) => {
+export const reqBanner = () => {
   return axios({
-    url: "/banner",
+    url: "/banner?type=2",
     method: "get",
-    params: type,
+  });
+};
+// 推荐歌单
+export const reqSongMenuLike = () => {
+  return axios({
+    url: "/personalized?limit=6",
+    method: "get",
+  });
+};
+
+// 最新音乐
+export const reqSongNew = () => {
+  return axios({
+    url: "/personalized/newsong",
+    method: "get",
+  });
+};
+
+// 获取排行榜
+export const reqHotSong = () => {
+  return axios({
+    url: "/top/list?id=3778678",
+    method: "get",
+  });
+};
+// 默认搜索关键词
+export const reqSearchButton = () => {
+  return axios({
+    url: "/search/hot/detail",
+    method: "get",
+  });
+};
+
+// 搜索匹配
+export const reqSearchList = (keywords) => {
+  return axios({
+    url: "/search/multimatch",
+    method: "get",
+    params: { keywords },
   });
 };

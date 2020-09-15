@@ -33,3 +33,152 @@
 .slider-slide {
   height: 100% !important;
 }
+.SongMenuLike,
+.SongNew {
+  margin-top: 0.2rem;
+}
+.SongMenuLike > p span,
+.SongNew > p span {
+  font-size: 0.4rem;
+  border-left: 2px solid #ff000a;
+  padding-left: 0.2rem;
+}
+
+.SongMenuLike ul {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.SongMenuLike_list {
+  width: 30%;
+  height: 3.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SongMenuLike_list img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.SongMenuLike_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 新歌 */
+.SongNew > p {
+  margin: 0.2rem 0;
+}
+.SongNew ul {
+  width: 100%;
+  height: 1.4rem;
+  padding: 0 0.1rem;
+  border-bottom: 0.01rem solid #ccc;
+}
+.SongNew ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.SongNew_text {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+.SongNew_text p {
+  flex: 1;
+}
+.SongNew_text p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.SongNew_go,
+.HotGo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.SongNew_Name {
+  font-size: 0.4rem;
+  font-weight: bolder;
+}
+.SongNew_hq,
+.HotText_hq {
+  border: 1px solid #f46939;
+  color: #f46939;
+  padding: 0 0.05rem;
+}
+.SongNew_Who,
+.HotText_who {
+  margin-left: 0.1rem;
+  color: #909090;
+}
+
+.icon-iconset0481 {
+  font-size: 0.6rem;
+}
+
+/* 热歌榜 */
+.HotSongImg {
+  background-image: url("../../assets//img/hot_music_bg_2x.jpg");
+  height: 3rem;
+  color: #fff;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+}
+.HotSongImg p:nth-child(2) {
+  font-size: 0.6rem;
+}
+.HotNum {
+  flex: 1;
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HotText {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.HotText p {
+  flex: 1;
+}
+.HotGo {
+  flex: 1;
+}
+.hotColor {
+  color: #fe0110;
+}
+.HotSongList {
+  width: 100vw;
+  height: 100vh;
+}
+.HotSongList ul li {
+  height: 1.4rem;
+  padding: 0 0.1rem;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.HotText p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.HotText_name {
+  width: 4.2rem;
+  font-size: 0.4rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,6 +1,36 @@
 import React, { Component } from "react";
-export default class HotSong extends Component {
+import { connect } from "react-redux";
+import HotSongList from "./components/HotSongList";
+import HotSongImg from "./components/HotSongImg";
+import { hotSongList, reqHotSongAction } from "../../store/modules/HotSong";
+class HotSong extends Component {
+  componentDidMount() {
+    const { reqHotSong } = this.props;
+    reqHotSong();
+  }
   render() {
-    return <div>热歌</div>;
+    const { hotSongList } = this.props;
+    return (
+      <div>
+        <HotSongImg></HotSongImg>
+        {hotSongList.length > 0 ? (
+          <HotSongList hotSongList={hotSongList}></HotSongList>
+        ) : null}
+      </div>
+    );
   }
 }
+
+const mapGet = (state) => {
+  return {
+    hotSongList: hotSongList(state),
+  };
+};
+
+const mapActions = (dispatch) => {
+  return {
+    reqHotSong: () => dispatch(reqHotSongAction()),
+  };
+};
+
+export default connect(mapGet, mapActions)(HotSong);
