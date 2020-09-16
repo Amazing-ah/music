@@ -1,7 +1,6 @@
 import React from "react";
 export default function SearchList(props) {
   let { searchList } = props;
-
   return (
     <div>
       <div className="SearchList">
@@ -16,9 +15,9 @@ export default function SearchList(props) {
                   <p className="SearchText_name">{item.name}</p>
                   <p>
                     <span className="SearchText_hq">sq</span>
-                    {item.artists.map((i) => {
+                    {item.artists.map((i, idx) => {
                       return (
-                        <span className="SearchText_who" key={i.id}>
+                        <span className="SearchText_who" key={idx}>
                           {i.name}
                         </span>
                       );

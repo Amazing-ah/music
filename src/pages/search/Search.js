@@ -14,42 +14,36 @@ import {
 import SearchList from "./components/SearchList";
 class Search extends Component {
   componentDidMount() {
-    const { reqSearchButton, reqSearchList } = this.props;
+    const { reqSearchButton } = this.props;
     reqSearchButton();
-    // reqSearchList();
   }
 
-  // changeKeywords
-  changeKeyWords(keywords) {
-    const { changeKeyWordsAction } = this.props;
-    changeKeyWordsAction(keywords);
-    // ？？？？
-  }
-  //  TODO  value 值为空时，==keywords=='' 清空列表
-  reqSearch() {
-    const { reqSearchList, keywords } = this.props;
-    if (keywords === "") {
+  reqSearch(e) {
+    this.props.changeKeyWordsAction(e);
+    const { reqSearchList } = this.props;
+    if (e === "") {
       return;
     }
     reqSearchList();
   }
 
   render() {
-    const { searchButton, keywords, searchList } = this.props;
+    const { searchButton, keywords, searchList, reqSearch } = this.props;
     return (
       <div>
         <SearchInput
           keywords={keywords}
-          changeKeyWords={(keywords) => this.changeKeyWords(keywords)}
-          reqSearch={() => this.reqSearch()}
+          reqSearch={(e) => this.reqSearch(e)}
         ></SearchInput>
-        {searchList.length > 0 ? (
-          <SearchList searchList={searchList}></SearchList>
-        ) : null}
 
-        {/* {searchButton.length > 0 ? (
-          <SearchButton searchButton={searchButton}></SearchButton>
-        ) : null} */}
+        {keywords ? (
+          <SearchList searchList={searchList}></SearchList>
+        ) : (
+          <SearchButton
+            searchButton={searchButton}
+            reqSearch={(value) => this.reqSearch(value)}
+          ></SearchButton>
+        )}
       </div>
     );
   }
