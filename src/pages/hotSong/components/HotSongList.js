@@ -3,7 +3,6 @@ import { numFilter } from "../../../utils/filter";
 
 export default function HotSongList(props) {
   const { hotSongList } = props;
-  console.log(hotSongList);
   return (
     <div>
       <div className="HotSongList">

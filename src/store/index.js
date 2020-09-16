@@ -3,12 +3,14 @@ import thunk from "redux-thunk";
 import home from "./modules/Home";
 import hotSong from "./modules/HotSong";
 import search from "./modules/Search";
+import songMenu from "./modules/SongMenu";
 // import { reqSearchListAction } from "./modules/Search";
 // 创建根reduce
 const reducer = combineReducers({
   home,
   hotSong,
   search,
+  songMenu,
 });
 // 创建仓库
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -17,7 +19,7 @@ const store = createStore(reducer, applyMiddleware(thunk));
 // store.dispatch(reqSearchListAction());
 
 // 监听
-store.subscribe(() => {
-  console.log(store.getState());
-});
+// store.subscribe(() => {
+//   console.log(store.getState());
+// });
 export default store;

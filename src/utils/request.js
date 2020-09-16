@@ -58,3 +58,12 @@ export const reqSearchList = (keywords) => {
     params: { keywords: keywords },
   });
 };
+//榜单详情
+
+export const reqSongMenuList = (id) => {
+  return axios({
+    url: "/playlist/detail",
+    method: "get",
+    params: { id: id },
+  });
+};

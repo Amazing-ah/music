@@ -1,33 +1,33 @@
 import React from "react";
-export default function SearchList(props) {
-  let { searchList } = props;
-
+export default function List(props) {
+  const { list } = props;
+  console.log(list);
   return (
     <div>
-      <div className="SearchList">
+      <div className="ListList">
         <ul>
-          {searchList.map((item, index) => {
+          {list.map((item, index) => {
             return (
               <li key={item.id}>
-                <div className="SearchNum">
+                <div className="ListNum">
                   <span className="">{index}</span>
                 </div>
-                <div className="SearchText">
-                  <p className="SearchText_name">{item.name}</p>
+                <div className="ListText">
+                  <p className="ListText_name">{item.al.name}</p>
                   <p>
-                    <span className="SearchText_hq">sq</span>
-                    {item.artists.map((i) => {
+                    <span className="ListText_hq">sq</span>
+                    {item.ar.map((i) => {
                       return (
-                        <span className="SearchText_who" key={i.id}>
+                        <span className="ListText_who" key={i.id}>
                           {i.name}
                         </span>
                       );
                     })}
 
-                    <span className="SearchText_who"></span>
+                    <span className="ListText_who"></span>
                   </p>
                 </div>
-                <div className="SearchGo">
+                <div className="ListGo">
                   <span className="iconfont icon-iconset0481"></span>
                 </div>
               </li>

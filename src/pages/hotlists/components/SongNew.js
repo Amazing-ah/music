@@ -1,12 +1,11 @@
 import React from "react";
 export default function SongNew(props) {
   const { songList } = props;
-  console.log(songList);
   return (
     <div>
       <div className="SongNew">
         <p>
-          <span>推荐歌单</span>
+          <span>最新音乐</span>
         </p>
         {songList.map((item) => {
           return (
