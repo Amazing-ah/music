@@ -1,7 +1,6 @@
 import React from "react";
 export default function SearchButton(props) {
   const { searchButton } = props;
-  console.log(searchButton);
   return (
     <div>
       <div className="searchButton">

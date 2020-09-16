@@ -53,8 +53,8 @@ export const reqSearchButton = () => {
 // 搜索匹配
 export const reqSearchList = (keywords) => {
   return axios({
-    url: "/search/multimatch",
+    url: "/search",
     method: "get",
-    params: { keywords },
+    params: { keywords: keywords },
   });
 };

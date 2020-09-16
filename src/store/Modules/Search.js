@@ -66,12 +66,9 @@ export const reqSearchButtonAction = () => {
 };
 export const reqSearchListAction = () => {
   return (dispatch, getState) => {
-    const { searchList } = getState().search;
-    if (searchList.length > 0) {
-      return;
-    }
+    const { keywords } = getState().search;
     reqSearchList(keywords).then((res) => {
-      dispatch(changeSearchListAction([1, 1, 1]));
+      dispatch(changeSearchListAction(res.data.result.songs));
     });
   };
 };
