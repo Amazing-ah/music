@@ -18,11 +18,14 @@ class HotLists extends Component {
     reqSongMenuLike();
     reqSongNew();
   }
-  // 热门歌单  点击  获取id  id SongMenuList 中取
-  //跳转  songMenu?id   --->设置动态路由
+
   getSongMenuid(id) {
     let sId = id;
     this.props.history.push("/songmenulist/" + sId);
+  }
+
+  goPlay(id) {
+    this.props.history.push("/play/" + id);
   }
 
   render() {
@@ -36,7 +39,12 @@ class HotLists extends Component {
             getSongMenuid={(id) => this.getSongMenuid(id)}
           ></SongMenuLike>
         ) : null}
-        {songList.length > 0 ? <SongNew songList={songList}></SongNew> : null}
+        {songList.length > 0 ? (
+          <SongNew
+            songList={songList}
+            goPlay={(id) => this.goPlay(id)}
+          ></SongNew>
+        ) : null}
       </div>
     );
   }

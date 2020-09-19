@@ -1,6 +1,6 @@
 import React from "react";
 export default function SongNew(props) {
-  const { songList } = props;
+  const { songList, goPlay } = props;
   return (
     <div>
       <div className="SongNew">
@@ -10,7 +10,7 @@ export default function SongNew(props) {
         {songList.map((item) => {
           return (
             <ul key={item.id}>
-              <li>
+              <li onClick={() => goPlay(item.id)}>
                 <div className="SongNew_text">
                   <p className="SongNew_Name">{item.name}</p>
                   <p>

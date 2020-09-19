@@ -28,7 +28,7 @@ class Search extends Component {
   }
 
   render() {
-    const { searchButton, keywords, searchList, reqSearch } = this.props;
+    const { searchButton, keywords, searchList } = this.props;
     return (
       <div>
         <SearchInput

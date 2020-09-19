@@ -107,8 +107,12 @@
   justify-content: flex-end;
 }
 .SongNew_Name {
+  width: 6.44rem;
   font-size: 0.4rem;
   font-weight: bolder;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .SongNew_hq,
 .HotText_hq {

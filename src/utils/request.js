@@ -67,3 +67,19 @@ export const reqSongMenuList = (id) => {
     params: { id: id },
   });
 };
+// 获取音乐 url
+export const reqUrl = (id) => {
+  return axios({
+    url: "/song/url",
+    method: "get",
+    params: { id: id },
+  });
+};
+// 歌词请求
+export const reqLrc = (id) => {
+  return axios({
+    url: "/lyric",
+    method: "get",
+    params: { id: id },
+  });
+};

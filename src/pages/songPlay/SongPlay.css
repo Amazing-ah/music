@@ -1,0 +1,64 @@
+.SongPlay {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#7f7f7f, #7f7f7f);
+}
+
+.PlayImg {
+  width: 100%;
+  height: 45%;
+  border-bottom: 1px solid red;
+
+  background-image: url("../../assets/img/disc-ip6.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+}
+.PlayImg_box img {
+  width: 2rem;
+  position: absolute;
+  left: 55%;
+  top: 0;
+}
+
+.IsPlay {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 44%;
+  top: 38%;
+}
+.PlayImg .icon-bofang,
+.PlayImg .icon-iconset0481 {
+  font-size: 1rem;
+  color: #fff;
+}
+.PlayList {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PlayListBox {
+  width: 70%;
+  height: 80%;
+  font-size: 0.3rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: turquoise;
+  overflow: hidden;
+  position: relative;
+}
+
+.PlayListBox ul {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.listCheck {
+  color: tomato;
+}
